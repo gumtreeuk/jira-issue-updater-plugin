@@ -181,7 +181,7 @@ public class RESTClient {
 
         if (possibleTransition.containsTransition(realWorkflowActionName)) {
           Integer targetTransitionId = possibleTransition.getTransitionId(realWorkflowActionName);
-          String bodydata = "{\"transition\": \"" + targetTransitionId + "\"}";
+          String bodydata = "{\"transition\": {\"id\": \"" + targetTransitionId + "\"}}";
           if (isDebug()) {
             logger.println("*** sending data: " + bodydata);
           }
